@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  </head>
+  <body>
     <div class="container">
-        <h1>Welcome to the Quiz App!</h1>
-        <p>Total Questions Attempted: {{ total_questions }}</p>
-        <p>Correct Answers: {{ correct_answers }}</p>
-        <p>Overall Accuracy: {{ accuracy }}%</p>
-        <a href="{% url 'quiz' %}" class="btn btn-primary">Start Quiz</a>
+      <h1>Welcome to the Quiz App!</h1>
+      <p>Total Questions Attempted: {{ total_questions }}</p>
+      <p>Correct Answers: {{ correct_answers }}</p>
+      <p>Overall Accuracy: {{ accuracy }}%</p>
+
+      <form action="{% url 'quiz' %}" method="GET">
+        <div class="form-group">
+          <label for="category">Choose Category:</label>
+          <select id="category-select" name="category" class="form-control">
+            <option value="">All Categories</option>
+            {% for category in categories %}
+              <option value="{{ category.name }}">{{ category.name }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Start Quiz</button>
+      </form>
     </div>
-</body>
+  </body>
 </html>
