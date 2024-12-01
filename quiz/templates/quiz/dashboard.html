@@ -3,30 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard</title>
+    <title>Quiz Dashboard</title>
+    <!-- Include Bootstrap CSS -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
   </head>
   <body>
-    <div class="container">
-      <h1>Welcome to the Quiz App!</h1>
-      <p>Total Questions Attempted: {{ total_questions }}</p>
-      <p>Correct Answers: {{ correct_answers }}</p>
-      <p>Overall Accuracy: {{ accuracy }}%</p>
+    <div class="container mt-5">
+      <div class="text-center mb-5">
+        <h1 class="display-4">Welcome to the Quiz App!</h1>
+        <p class="lead">Test your knowledge and track your performance!</p>
+      </div>
 
-      <form action="{% url 'quiz' %}" method="GET">
-        <div class="form-group">
-          <label for="category">Choose Category:</label>
-          <select id="category-select" name="category" class="form-control">
-            <option value="">All Categories</option>
-            {% for category in categories %}
-              <option value="{{ category.name }}">{{ category.name }}</option>
-            {% endfor %}
-          </select>
+      <div class="card shadow-sm mb-5">
+        <div class="card-body">
+          <h5 class="card-title">Your Performance</h5>
+          <p class="mb-1"><strong>Total Questions </strong> {{ total_questions }}</p>
+          <p class="mb-1"><strong>Correct Answers:</strong> {{ correct_answers }}</p>
+          <p class="mb-0"><strong>Overall Accuracy:</strong> {{ accuracy }}%</p>
         </div>
-        <button type="submit" class="btn btn-primary">Start Quiz</button>
-      </form>
+      </div>
+
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Start a New Quiz</h5>
+          <form action="{% url 'quiz' %}" method="GET">
+            <div class="form-group">
+              <label for="category-select" class="font-weight-bold">Choose a Category:</label>
+              <select id="category-select" name="category" class="form-control">
+                <option value="">All Categories</option>
+                {% for category in categories %}
+                  <option value="{{ category.name }}">{{ category.name }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+              Start Quiz
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   </body>
 </html>
