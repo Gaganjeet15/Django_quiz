@@ -1,0 +1,665 @@
+[
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the size of int in C?",
+            "option_1": "2 bytes",
+            "option_2": "4 bytes",
+            "option_3": "8 bytes",
+            "option_4": "Depends on the system",
+            "correct_answer": "4 bytes",
+            "category": "3",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is a valid variable name in C?",
+            "option_1": "int 1variable;",
+            "option_2": "int variable1;",
+            "option_3": "int #variable;",
+            "option_4": "int &variable;",
+            "correct_answer": "int variable1;",
+            "category": "3",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the correct way to declare an array in C?",
+            "option_1": "int arr[5];",
+            "option_2": "array arr[5];",
+            "option_3": "int[] arr;",
+            "option_4": "int arr(5);",
+            "correct_answer": "int arr[5];",
+            "category": "3",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is the correct syntax to print in C?",
+            "option_1": "print(\"Hello World\");",
+            "option_2": "printf(\"Hello World\");",
+            "option_3": "echo(\"Hello World\");",
+            "option_4": "println(\"Hello World\");",
+            "correct_answer": "printf(\"Hello World\");",
+            "category": "3",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is used for memory allocation in C?",
+            "option_1": "malloc()",
+            "option_2": "calloc()",
+            "option_3": "alloc()",
+            "option_4": "All of the above",
+            "correct_answer": "malloc()",
+            "category": "3",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What does the 'void' keyword represent in C?",
+            "option_1": "It represents a pointer.",
+            "option_2": "It represents a function that returns nothing.",
+            "option_3": "It represents an integer.",
+            "option_4": "It represents an uninitialized variable.",
+            "correct_answer": "It represents a function that returns nothing.",
+            "category": "3",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which header file is required to use the printf function in C?",
+            "option_1": "<stdlib.h>",
+            "option_2": "<stdio.h>",
+            "option_3": "<conio.h>",
+            "option_4": "<math.h>",
+            "correct_answer": "<stdio.h>",
+            "category": "3",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the correct syntax for a for loop in C?",
+            "option_1": "for(int i=0; i<10; i++)",
+            "option_2": "for(int i=0, i<10, i++)",
+            "option_3": "for(i=0; i<10; ++i)",
+            "option_4": "for(int i<0; i<10; i++)",
+            "correct_answer": "for(int i=0; i<10; i++)",
+            "category": "3",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following operators is used to access a structure member in C?",
+            "option_1": ".",
+            "option_2": "&",
+            "option_3": "$",
+            "option_4": "->",
+            "correct_answer": ".",
+            "category": "3",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which keyword is used to return a value from a function in C?",
+            "option_1": "return",
+            "option_2": "yield",
+            "option_3": "exit",
+            "option_4": "break",
+            "correct_answer": "return",
+            "category": "3",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which function is used to open a file in C?",
+            "option_1": "open()",
+            "option_2": "fopen()",
+            "option_3": "fileopen()",
+            "option_4": "openfile()",
+            "correct_answer": "fopen()",
+            "category": "3",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is not a valid pointer operation in C?",
+            "option_1": "Dereferencing",
+            "option_2": "Pointer arithmetic",
+            "option_3": "Pointer increment",
+            "option_4": "Pointer assignment without initialization",
+            "correct_answer": "Pointer assignment without initialization",
+            "category": "3",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following functions is used to read a line from the input in C?",
+            "option_1": "gets()",
+            "option_2": "scanf()",
+            "option_3": "fgets()",
+            "option_4": "read()",
+            "correct_answer": "fgets()",
+            "category": "3",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the default return value of the main function in C?",
+            "option_1": "0",
+            "option_2": "-1",
+            "option_3": "1",
+            "option_4": "void",
+            "correct_answer": "0",
+            "category": "3",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the size of a pointer in C?",
+            "option_1": "Depends on the data type",
+            "option_2": "4 bytes",
+            "option_3": "8 bytes",
+            "option_4": "Depends on the system architecture",
+            "correct_answer": "Depends on the system architecture",
+            "category": "3",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following operators is used for pointer dereferencing in C?",
+            "option_1": "*",
+            "option_2": "&",
+            "option_3": "$",
+            "option_4": "#",
+            "correct_answer": "*",
+            "category": "3",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the correct way to initialize a structure variable in C?",
+            "option_1": "struct person p = {\"John\", 25};",
+            "option_2": "struct person p = {John, 25};",
+            "option_3": "struct person p = (John, 25);",
+            "option_4": "struct person p = {John, 25};",
+            "correct_answer": "struct person p = {\"John\", 25};",
+            "category": "3",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is a valid comment in C?",
+            "option_1": "/* This is a comment */",
+            "option_2": "// This is a comment",
+            "option_3": "Both of the above",
+            "option_4": "None of the above",
+            "correct_answer": "Both of the above",
+            "category": "3",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is used to dynamically allocate memory in C?",
+            "option_1": "malloc()",
+            "option_2": "calloc()",
+            "option_3": "realloc()",
+            "option_4": "All of the above",
+            "correct_answer": "All of the above",
+            "category": "3",
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is not a valid storage class in C?",
+            "option_1": "auto",
+            "option_2": "register",
+            "option_3": "extern",
+            "option_4": "staticp",
+            "correct_answer": "staticp",
+            "category": "3",
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is the correct syntax for a function pointer?",
+            "option_1": "int (*ptr)(int);",
+            "option_2": "int ptr(int);",
+            "option_3": "int (*ptr)(int, int);",
+            "option_4": "int ptr*();",
+            "correct_answer": "int (*ptr)(int);",
+            "category": "3",
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What does the 'static' keyword do when used in a function in C?",
+            "option_1": "It preserves the local variables between function calls.",
+            "option_2": "It restricts the function's scope to within the current file.",
+            "option_3": "It makes the function faster.",
+            "option_4": "It makes the function run in parallel.",
+            "correct_answer": "It preserves the local variables between function calls.",
+            "category": "3",
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the result of the expression '5 + 3 * 2' in C?",
+            "option_1": "11",
+            "option_2": "16",
+            "option_3": "13",
+            "option_4": "None of the above",
+            "correct_answer": "11",
+            "category": "3",
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is the correct way to define a structure in C?",
+            "option_1": "struct person {char name[20]; int age;};",
+            "option_2": "struct {char name[20]; int age;} person;",
+            "option_3": "struct person {name char[20]; age int;};",
+            "option_4": "struct person = {name char[20]; age int;};",
+            "correct_answer": "struct person {char name[20]; int age;};",
+            "category": "3",
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following statements is true about a pointer in C?",
+            "option_1": "A pointer holds the memory address of a variable.",
+            "option_2": "Pointers store values of data types.",
+            "option_3": "Pointers cannot point to arrays.",
+            "option_4": "Pointers cannot be used for dynamic memory allocation.",
+            "correct_answer": "A pointer holds the memory address of a variable.",
+            "category": "3",
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which function is used to compare two strings in C?",
+            "option_1": "strcomp()",
+            "option_2": "strcmp()",
+            "option_3": "stringcmp()",
+            "option_4": "strcompare()",
+            "correct_answer": "strcmp()",
+            "category": "3",
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What does the 'continue' statement do in a loop in C?",
+            "option_1": "Terminates the loop.",
+            "option_2": "Skips the current iteration and continues with the next iteration.",
+            "option_3": "Exits the program.",
+            "option_4": "Pauses the loop.",
+            "correct_answer": "Skips the current iteration and continues with the next iteration.",
+            "category": "3",
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the result of the expression '5 / 2' in C when both operands are integers?",
+            "option_1": "2.5",
+            "option_2": "2",
+            "option_3": "3",
+            "option_4": "1",
+            "correct_answer": "2",
+            "category": "3",
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is the correct way to declare a constant in C?",
+            "option_1": "const int num = 10;",
+            "option_2": "const 10 = num;",
+            "option_3": "define num 10;",
+            "option_4": "int num = 10 const;",
+            "correct_answer": "const int num = 10;",
+            "category": "3",
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What does the 'exit(0)' statement do in C?",
+            "option_1": "Exits the program and returns 0 to the operating system.",
+            "option_2": "Exits the program and returns 1 to the operating system.",
+            "option_3": "Pauses the program.",
+            "option_4": "Restarts the program.",
+            "correct_answer": "Exits the program and returns 0 to the operating system.",
+            "category": "3",
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is used for function overloading in C?",
+            "option_1": "C supports function overloading.",
+            "option_2": "We use different names for functions.",
+            "option_3": "We use different parameter types for functions.",
+            "option_4": "C does not support function overloading.",
+            "correct_answer": "C does not support function overloading.",
+            "category": "3",
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is a valid way to pass a structure to a function in C?",
+            "option_1": "By value",
+            "option_2": "By reference",
+            "option_3": "Both of the above",
+            "option_4": "None of the above",
+            "correct_answer": "Both of the above",
+            "category": "3",
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is the correct syntax for declaring a pointer to a function in C?",
+            "option_1": "int (*ptr)();",
+            "option_2": "int *ptr();",
+            "option_3": "ptr *int();",
+            "option_4": "function ptr*();",
+            "correct_answer": "int (*ptr)();",
+            "category": "3",
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the default value of a static variable in C?",
+            "option_1": "Garbage value",
+            "option_2": "Zero",
+            "option_3": "One",
+            "option_4": "Null",
+            "correct_answer": "Zero",
+            "category": "3",
+            "difficulty": "Medium"
+        }
+    },
+     {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is the correct syntax for a recursive function in C?",
+            "option_1": "int func() { func(); }",
+            "option_2": "int func() { return func(); }",
+            "option_3": "void func() { func(); }",
+            "option_4": "None of the above",
+            "correct_answer": "int func() { return func(); }",
+            "category": "3",
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What will happen if we try to dereference a NULL pointer in C?",
+            "option_1": "It will result in undefined behavior.",
+            "option_2": "It will return NULL.",
+            "option_3": "It will cause a segmentation fault.",
+            "option_4": "It will crash the system.",
+            "correct_answer": "It will cause a segmentation fault.",
+            "category": "3",
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the primary difference between 'malloc' and 'calloc' in C?",
+            "option_1": "malloc allocates memory but does not initialize it, while calloc allocates memory and initializes it to zero.",
+            "option_2": "malloc initializes memory, while calloc does not.",
+            "option_3": "malloc allocates memory for a single object, while calloc allocates memory for an array.",
+            "option_4": "There is no difference between malloc and calloc.",
+            "correct_answer": "malloc allocates memory but does not initialize it, while calloc allocates memory and initializes it to zero.",
+            "category": "3",
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is the result of the expression 'x++ + ++x' in C, assuming x = 5?",
+            "option_1": "11",
+            "option_2": "12",
+            "option_3": "13",
+            "option_4": "None of the above",
+            "correct_answer": "12",
+            "category": "3",
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the purpose of the 'restrict' keyword in C?",
+            "option_1": "It tells the compiler that a pointer will not be used to modify the same memory region.",
+            "option_2": "It restricts the access to a variable to a specific function.",
+            "option_3": "It ensures that a pointer is not dereferenced.",
+            "option_4": "It prevents the pointer from being initialized.",
+            "correct_answer": "It tells the compiler that a pointer will not be used to modify the same memory region.",
+            "category": "3",
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the time complexity of sorting an array using quicksort in the worst case?",
+            "option_1": "O(n log n)",
+            "option_2": "O(n^2)",
+            "option_3": "O(n)",
+            "option_4": "O(log n)",
+            "correct_answer": "O(n^2)",
+            "category": "3",
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the purpose of the 'typedef' keyword in C?",
+            "option_1": "It defines a new data type.",
+            "option_2": "It creates a constant value.",
+            "option_3": "It defines a function prototype.",
+            "option_4": "It assigns a new name to an existing type.",
+            "correct_answer": "It assigns a new name to an existing type.",
+            "category": "3",
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is the correct syntax for a function pointer array in C?",
+            "option_1": "int (*arr[10])();",
+            "option_2": "int arr[10]();",
+            "option_3": "int arr[](){};",
+            "option_4": "None of the above",
+            "correct_answer": "int (*arr[10])();",
+            "category": "3",
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is a valid way to pass an array to a function in C?",
+            "option_1": "By value",
+            "option_2": "By reference",
+            "option_3": "Both of the above",
+            "option_4": "None of the above",
+            "correct_answer": "By reference",
+            "category": "3",
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is a valid syntax to declare a structure with a flexible array member in C?",
+            "option_1": "struct { int a; int arr[]; };",
+            "option_2": "struct { int a[10]; int arr[]; };",
+            "option_3": "struct { int a; int arr[0]; };",
+            "option_4": "None of the above",
+            "correct_answer": "struct { int a; int arr[]; };",
+            "category": "3",
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is an example of a memory leak in C?",
+            "option_1": "Forgetting to free dynamically allocated memory.",
+            "option_2": "Forgetting to initialize a variable.",
+            "option_3": "Accessing memory after it has been freed.",
+            "option_4": "None of the above.",
+            "correct_answer": "Forgetting to free dynamically allocated memory.",
+            "category": "3",
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the effect of the 'exit()' function in C?",
+            "option_1": "It terminates the program with a specified exit status.",
+            "option_2": "It terminates the function in which it is called.",
+            "option_3": "It pauses the program.",
+            "option_4": "It restarts the program.",
+            "correct_answer": "It terminates the program with a specified exit status.",
+            "category": "3",
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the result of the expression 'sizeof(char)' in C?",
+            "option_1": "1",
+            "option_2": "2",
+            "option_3": "4",
+            "option_4": "Depends on the system",
+            "correct_answer": "1",
+            "category": "3",
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What does the 'restrict' keyword in C allow the compiler to do?",
+            "option_1": "It allows the compiler to optimize memory access for pointers.",
+            "option_2": "It prevents the use of pointers in the code.",
+            "option_3": "It allows pointers to be shared between functions.",
+            "option_4": "It allows the compiler to use global variables.",
+            "correct_answer": "It allows the compiler to optimize memory access for pointers.",
+            "category": "3",
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the result of the expression '10 / 3' in C when both operands are integers?",
+            "option_1": "3.33",
+            "option_2": "3",
+            "option_3": "4",
+            "option_4": "None of the above",
+            "correct_answer": "3",
+            "category": "3",
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the purpose of 'struct' in C?",
+            "option_1": "It is used to define a function.",
+            "option_2": "It is used to define a set of related variables of different types.",
+            "option_3": "It is used to define constants.",
+            "option_4": "It is used to create new data types.",
+            "correct_answer": "It is used to define a set of related variables of different types.",
+            "category": "3",
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following operators can be overloaded in C++?",
+            "option_1": "Assignment operator",
+            "option_2": "New operator",
+            "option_3": "All of the above",
+            "option_4": "None of the above",
+            "correct_answer": "All of the above",
+            "category": "3",
+            "difficulty": "Hard"
+        }
+    }
+]

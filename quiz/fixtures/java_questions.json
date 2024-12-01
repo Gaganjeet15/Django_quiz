@@ -1,0 +1,704 @@
+[
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the default value of a boolean variable in Java?",
+            "option_1": "true",
+            "option_2": "false",
+            "option_3": "null",
+            "option_4": "0",
+            "correct_answer": "false",
+            "category": "2",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is not a primitive data type in Java?",
+            "option_1": "int",
+            "option_2": "char",
+            "option_3": "String",
+            "option_4": "boolean",
+            "correct_answer": "String",
+            "category": "2",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What does the 'public' keyword mean in Java?",
+            "option_1": "The class is visible to all other classes",
+            "option_2": "The class can only be accessed from the same package",
+            "option_3": "The class is not visible to other classes",
+            "option_4": "The class is used for internal purposes",
+            "correct_answer": "The class is visible to all other classes",
+            "category": "2",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which method is used to start a thread in Java?",
+            "option_1": "start()",
+            "option_2": "run()",
+            "option_3": "init()",
+            "option_4": "execute()",
+            "correct_answer": "start()",
+            "category": "2",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the size of a boolean variable in Java?",
+            "option_1": "1 bit",
+            "option_2": "1 byte",
+            "option_3": "4 bytes",
+            "option_4": "2 bytes",
+            "correct_answer": "1 bit",
+            "category": "2",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which method is used to find the length of a string in Java?",
+            "option_1": "length()",
+            "option_2": "size()",
+            "option_3": "getLength()",
+            "option_4": "len()",
+            "correct_answer": "length()",
+            "category": "2",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which keyword is used to create a class in Java?",
+            "option_1": "new",
+            "option_2": "class",
+            "option_3": "create",
+            "option_4": "define",
+            "correct_answer": "class",
+            "category": "2",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What does the 'void' keyword indicate in a method declaration in Java?",
+            "option_1": "The method does not return any value",
+            "option_2": "The method will return a null value",
+            "option_3": "The method returns an object",
+            "option_4": "The method is private",
+            "correct_answer": "The method does not return any value",
+            "category": "2",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is used to terminate a loop in Java?",
+            "option_1": "break",
+            "option_2": "exit",
+            "option_3": "return",
+            "option_4": "stop",
+            "correct_answer": "break",
+            "category": "2",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the default value of an integer variable in Java?",
+            "option_1": "0",
+            "option_2": "null",
+            "option_3": "undefined",
+            "option_4": "1",
+            "correct_answer": "0",
+            "category": "2",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which package is used to handle input and output in Java?",
+            "option_1": "java.io",
+            "option_2": "java.util",
+            "option_3": "java.lang",
+            "option_4": "java.net",
+            "correct_answer": "java.io",
+            "category": "2",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is not a Java access modifier?",
+            "option_1": "private",
+            "option_2": "protected",
+            "option_3": "default",
+            "option_4": "public",
+            "correct_answer": "default",
+            "category": "2",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the default value of an object reference in Java?",
+            "option_1": "null",
+            "option_2": "0",
+            "option_3": "undefined",
+            "option_4": "empty",
+            "correct_answer": "null",
+            "category": "2",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following keywords is used to prevent method overriding in Java?",
+            "option_1": "static",
+            "option_2": "final",
+            "option_3": "protected",
+            "option_4": "private",
+            "correct_answer": "final",
+            "category": "2",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is used to compare two strings in Java?",
+            "option_1": "==",
+            "option_2": "compare()",
+            "option_3": "equals()",
+            "option_4": "compareTo()",
+            "correct_answer": "equals()",
+            "category": "2",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which collection class implements the List interface in Java?",
+            "option_1": "ArrayList",
+            "option_2": "HashSet",
+            "option_3": "TreeMap",
+            "option_4": "LinkedList",
+            "correct_answer": "ArrayList",
+            "category": "2",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the default capacity of an ArrayList in Java?",
+            "option_1": "10",
+            "option_2": "5",
+            "option_3": "20",
+            "option_4": "15",
+            "correct_answer": "10",
+            "category": "2",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What does the 'super' keyword refer to in Java?",
+            "option_1": "The parent class",
+            "option_2": "The current object",
+            "option_3": "A static method",
+            "option_4": "An abstract class",
+            "correct_answer": "The parent class",
+            "category": "2",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the return type of the hashCode() method in Java?",
+            "option_1": "int",
+            "option_2": "boolean",
+            "option_3": "String",
+            "option_4": "Object",
+            "correct_answer": "int",
+            "category": "2",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which method is used to stop a thread in Java?",
+            "option_1": "end()",
+            "option_2": "stop()",
+            "option_3": "destroy()",
+            "option_4": "terminate()",
+            "correct_answer": "stop()",
+            "category": "2",
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is a feature of Java 8?",
+            "option_1": "Lambda expressions",
+            "option_2": "Static imports",
+            "option_3": "JavaFX",
+            "option_4": "All of the above",
+            "correct_answer": "All of the above",
+            "category": "2",
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the purpose of the transient keyword in Java?",
+            "option_1": "It prevents serialization of a member variable",
+            "option_2": "It defines an abstract class",
+            "option_3": "It makes a variable static",
+            "option_4": "It makes a variable final",
+            "correct_answer": "It prevents serialization of a member variable",
+            "category": "2",
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is not a valid Java collection?",
+            "option_1": "List",
+            "option_2": "Set",
+            "option_3": "Map",
+            "option_4": "TreeSet",
+            "correct_answer": "TreeSet",
+            "category": "2",
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following methods can be used to synchronize a block of code in Java?",
+            "option_1": "synchronized()",
+            "option_2": "lock()",
+            "option_3": "synchronize()",
+            "option_4": "mutex()",
+            "correct_answer": "synchronized()",
+            "category": "2",
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is not a valid access modifier in Java?",
+            "option_1": "public",
+            "option_2": "private",
+            "option_3": "protected",
+            "option_4": "inner",
+            "correct_answer": "inner",
+            "category": "2",
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which collection class is part of the Java Collections Framework that implements the Set interface?",
+            "option_1": "HashSet",
+            "option_2": "TreeSet",
+            "option_3": "LinkedList",
+            "option_4": "Both HashSet and TreeSet",
+            "correct_answer": "Both HashSet and TreeSet",
+            "category": "2",
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following exceptions is thrown when an attempt to divide by zero occurs in Java?",
+            "option_1": "ArithmeticException",
+            "option_2": "NullPointerException",
+            "option_3": "IndexOutOfBoundsException",
+            "option_4": "ClassCastException",
+            "correct_answer": "ArithmeticException",
+            "category": "2",
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is true about a Java interface?",
+            "option_1": "An interface can contain concrete methods",
+            "option_2": "An interface cannot have constructors",
+            "option_3": "An interface can only have static variables",
+            "option_4": "An interface cannot extend another interface",
+            "correct_answer": "An interface cannot have constructors",
+            "category": "2",
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the output of the following code snippet?\nSystem.out.println(10 / 3);",
+            "option_1": "3.0",
+            "option_2": "3",
+            "option_3": "3.333",
+            "option_4": "Error",
+            "correct_answer": "3",
+            "category": "2",
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following classes are a part of the java.util package in Java?",
+            "option_1": "ArrayList",
+            "option_2": "LinkedList",
+            "option_3": "HashMap",
+            "option_4": "All of the above",
+            "correct_answer": "All of the above",
+            "category": "2",
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What does the 'final' keyword do in Java?",
+            "option_1": "It makes the method static",
+            "option_2": "It prevents method overriding",
+            "option_3": "It makes a variable constant",
+            "option_4": "It makes the class abstract",
+            "correct_answer": "It prevents method overriding",
+            "category": "2",
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What will be the output of the following Java code?\nSystem.out.println('A' + 1);",
+            "option_1": "66",
+            "option_2": "A1",
+            "option_3": "65",
+            "option_4": "Error",
+            "correct_answer": "66",
+            "category": "2",
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is the root class of all exceptions in Java?",
+            "option_1": "Throwable",
+            "option_2": "Exception",
+            "option_3": "Error",
+            "option_4": "RuntimeException",
+            "correct_answer": "Throwable",
+            "category": "2",
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following method of the Object class is used to get the hash code of an object?",
+            "option_1": "getHashCode()",
+            "option_2": "hash()",
+            "option_3": "hashCode()",
+            "option_4": "getHash()",
+            "correct_answer": "hashCode()",
+            "category": "2",
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is the correct way to start a Java thread?",
+            "option_1": "thread.start()",
+            "option_2": "new Thread().run()",
+            "option_3": "Thread.run()",
+            "option_4": "new Thread().start()",
+            "correct_answer": "new Thread().start()",
+            "category": "2",
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is not a valid constructor declaration in Java?",
+            "option_1": "public MyClass() {}",
+            "option_2": "MyClass() {}",
+            "option_3": "void MyClass() {}",
+            "option_4": "private MyClass() {}",
+            "correct_answer": "void MyClass() {}",
+            "category": "2",
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following methods is used to read input from the console in Java?",
+            "option_1": "Scanner.next()",
+            "option_2": "BufferedReader.read()",
+            "option_3": "System.in.read()",
+            "option_4": "Console.read()",
+            "correct_answer": "Scanner.next()",
+            "category": "2",
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following Java collection classes is not part of the List interface?",
+            "option_1": "ArrayList",
+            "option_2": "LinkedList",
+            "option_3": "HashMap",
+            "option_4": "Vector",
+            "correct_answer": "HashMap",
+            "category": "2",
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is true about Java's garbage collection mechanism?",
+            "option_1": "It is done manually by the developer",
+            "option_2": "It runs on a separate thread",
+            "option_3": "It only works for heap memory",
+            "option_4": "It never runs in the background",
+            "correct_answer": "It runs on a separate thread",
+            "category": "2",
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the correct way to handle exceptions in Java?",
+            "option_1": "try-catch-finally",
+            "option_2": "catch-throw-finally",
+            "option_3": "finally-catch-try",
+            "option_4": "throw-try-catch",
+            "correct_answer": "try-catch-finally",
+            "category": "2",
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following design patterns is used to ensure that a class has only one instance in Java?",
+            "option_1": "Factory pattern",
+            "option_2": "Singleton pattern",
+            "option_3": "Observer pattern",
+            "option_4": "Decorator pattern",
+            "correct_answer": "Singleton pattern",
+            "category": "2",
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the purpose of the volatile keyword in Java?",
+            "option_1": "It ensures that a variable is updated across all threads",
+            "option_2": "It makes a variable immutable",
+            "option_3": "It ensures that a variable is not cached",
+            "option_4": "It makes a variable synchronized",
+            "correct_answer": "It ensures that a variable is updated across all threads",
+            "category": "2",
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the main difference between a HashMap and a TreeMap in Java?",
+            "option_1": "HashMap is sorted by key, TreeMap is not",
+            "option_2": "HashMap allows null keys, TreeMap does not",
+            "option_3": "TreeMap uses hashing, while HashMap uses balancing",
+            "option_4": "TreeMap is faster than HashMap",
+            "correct_answer": "HashMap allows null keys, TreeMap does not",
+            "category": "2",
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What will be the result of executing the following code?\nSystem.out.println(10 / 0);",
+            "option_1": "ArithmeticException",
+            "option_2": "Infinity",
+            "option_3": "ZeroDivisionException",
+            "option_4": "Error",
+            "correct_answer": "ArithmeticException",
+            "category": "2",
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following Java classes cannot be inherited?",
+            "option_1": "Abstract class",
+            "option_2": "Final class",
+            "option_3": "Interface",
+            "option_4": "Concrete class",
+            "correct_answer": "Final class",
+            "category": "2",
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the output of the following code?\nString s = \"abc\";\ns += \"def\";\nSystem.out.println(s);",
+            "option_1": "abcdef",
+            "option_2": "abc def",
+            "option_3": "abcd ef",
+            "option_4": "Compilation error",
+            "correct_answer": "abcdef",
+            "category": "2",
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is a characteristic of a thread-safe collection in Java?",
+            "option_1": "It uses synchronization to ensure thread safety",
+            "option_2": "It allows multiple threads to write simultaneously",
+            "option_3": "It blocks threads that try to read the collection",
+            "option_4": "It does not allow null values",
+            "correct_answer": "It uses synchronization to ensure thread safety",
+            "category": "2",
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the purpose of the 'super' keyword in Java?",
+            "option_1": "To call the parent class constructor",
+            "option_2": "To define a subclass method",
+            "option_3": "To create a new instance of the parent class",
+            "option_4": "To override the parent class method",
+            "correct_answer": "To call the parent class constructor",
+            "category": "2",
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is the correct statement about Java's pass-by-value?",
+            "option_1": "Java is pass-by-reference for all types",
+            "option_2": "Java is pass-by-value for primitive types and pass-by-reference for objects",
+            "option_3": "Java is pass-by-value for all types",
+            "option_4": "Java is pass-by-reference for primitive types and pass-by-value for objects",
+            "correct_answer": "Java is pass-by-value for primitive types and pass-by-reference for objects",
+            "category": "2",
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which method can be used to wait for a thread to finish in Java?",
+            "option_1": "Thread.wait()",
+            "option_2": "Thread.join()",
+            "option_3": "Thread.sleep()",
+            "option_4": "Thread.stop()",
+            "correct_answer": "Thread.join()",
+            "category": "2",
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is the default initial capacity of an ArrayList in Java?",
+            "option_1": "10",
+            "option_2": "15",
+            "option_3": "20",
+            "option_4": "5",
+            "correct_answer": "10",
+            "category": "2",
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the difference between StringBuilder and StringBuffer in Java?",
+            "option_1": "StringBuffer is not thread-safe, while StringBuilder is thread-safe",
+            "option_2": "StringBuilder is thread-safe, while StringBuffer is not thread-safe",
+            "option_3": "StringBuffer is thread-safe, while StringBuilder is not thread-safe",
+            "option_4": "Both are thread-safe",
+            "correct_answer": "StringBuffer is thread-safe, while StringBuilder is not thread-safe",
+            "category": "2",
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following methods is used to start a thread in Java?",
+            "option_1": "Thread.run()",
+            "option_2": "Thread.start()",
+            "option_3": "Thread.begin()",
+            "option_4": "Thread.execute()",
+            "correct_answer": "Thread.start()",
+            "category": "2",
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is true about the 'hashCode' method in Java?",
+            "option_1": "The hashCode method must always return a unique value for each object",
+            "option_2": "Two objects with the same hashCode must be equal",
+            "option_3": "It is used to compare two objects for equality",
+            "option_4": "Objects that are equal must have the same hashCode",
+            "correct_answer": "Objects that are equal must have the same hashCode",
+            "category": "2",
+            "difficulty": "Hard"
+        }
+    }
+]

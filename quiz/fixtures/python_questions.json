@@ -1,0 +1,818 @@
+[
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the output of print(2 ** 3)?",
+            "option_1": "8",
+            "option_2": "6",
+            "option_3": "9",
+            "option_4": "4",
+            "correct_answer": "8",
+            "category": 1,
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following is a valid variable name in Python?",
+            "option_1": "my-variable",
+            "option_2": "myVariable",
+            "option_3": "my variable",
+            "option_4": "my@variable",
+            "correct_answer": "myVariable",
+            "category": 1,
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What does len([1, 2, 3]) return?",
+            "option_1": "1",
+            "option_2": "2",
+            "option_3": "3", 
+            "option_4": "4",
+            "correct_answer": "3",
+            "category": 1,
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which method is used to convert a string to lowercase?",
+            "option_1": "lower()",
+            "option_2": "toLowerCase()",
+            "option_3": "convert_lower()",
+            "option_4": "to_lower()",
+            "correct_answer": "lower()",
+            "category": 1,
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the result of print(type(10))?",
+            "option_1": "<class 'string'>",
+            "option_2": "<class 'int'>", 
+            "option_3": "<class 'float'>",
+            "option_4": "<class 'complex'>",
+            "correct_answer": "<class 'int'>",
+            "category": 1,
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which symbol is used for comments in Python?",
+            "option_1": "//",
+            "option_2": "/* */",
+            "option_3": "#",
+            "option_4": "--",
+            "correct_answer": "#",
+            "category": 1,
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What does print(bool(0)) return?",
+            "option_1": "True",
+            "option_2": "False", 
+            "option_3": "None",
+            "option_4": "0",
+            "correct_answer": "False",
+            "category": 1,
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of these is a mutable data type in Python?",
+            "option_1": "Tuple",
+            "option_2": "String",
+            "option_3": "List", 
+            "option_4": "Integer",
+            "correct_answer": "List",
+            "category": 1,
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What will print(2 + '3') result in?",
+            "option_1": "5",
+            "option_2": "'5'",
+            "option_3": "TypeError", 
+            "option_4": "'23'",
+            "correct_answer": "TypeError",
+            "category": 1,
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the output of print(max([1, 5, 3, 7]))?",
+            "option_1": "1",
+            "option_2": "3",
+            "option_3": "5", 
+            "option_4": "7",
+            "correct_answer": "7",
+            "category": 1,
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which method removes the last item from a list?",
+            "option_1": "delete()",
+            "option_2": "pop()",
+            "option_3": "remove()",
+            "option_4": "discard()",
+            "correct_answer": "pop()",
+            "category": 1,
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What does print(3 * '2') return?",
+            "option_1": "6",
+            "option_2": "'6'",
+            "option_3": "'222'",
+            "option_4": "TypeError",
+            "correct_answer": "'222'",
+            "category": 1,
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which built-in function is used to get user input?",
+            "option_1": "input()",
+            "option_2": "get_input()",
+            "option_3": "scan()",
+            "option_4": "read()",
+            "correct_answer": "input()",
+            "category": 1,
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What does range(5) generate?",
+            "option_1": "[0, 1, 2, 3, 4, 5]",
+            "option_2": "[0, 1, 2, 3, 4]",
+            "option_3": "(0, 1, 2, 3, 4)",
+            "option_4": "(0, 1, 2, 3, 4, 5)",
+            "correct_answer": "[0, 1, 2, 3, 4]",
+            "category": 1,
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the default value returned by functions without a return statement?",
+            "option_1": "0",
+            "option_2": "None",
+            "option_3": "False",
+            "option_4": "Undefined",
+            "correct_answer": "None",
+            "category": 1,
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which method is used to add a key-value pair to a dictionary?",
+            "option_1": "append()",
+            "option_2": "add()",
+            "option_3": "update()",
+            "option_4": "insert()",
+            "correct_answer": "update()",
+            "category": 1,
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What does print(3 and 4) return?",
+            "option_1": "3",
+            "option_2": "4",
+            "option_3": "True",
+            "option_4": "False",
+            "correct_answer": "4",
+            "category": 1,
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which method is used to find the index of an element in a list?",
+            "option_1": "find()",
+            "option_2": "search()",
+            "option_3": "index()",
+            "option_4": "get_index()",
+            "correct_answer": "index()",
+            "category": 1,
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What does print(ord('A')) return?",
+            "option_1": "1",
+            "option_2": "'A'",
+            "option_3": "65",
+            "option_4": "0",
+            "correct_answer": "65",
+            "category": 1,
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the result of print(['a', 'b', 'c'].count('b'))?",
+            "option_1": "1",
+            "option_2": "2",
+            "option_3": "3",
+            "option_4": "0",
+            "correct_answer": "1",
+            "category": 1,
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which method is used to remove duplicates from a list?",
+            "option_1": "remove_duplicates()",
+            "option_2": "unique()",
+            "option_3": "set()",
+            "option_4": "distinct()",
+            "correct_answer": "set()",
+            "category": 1,
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What does print(bool('False')) return?",
+            "option_1": "True",
+            "option_2": "False",
+            "option_3": "None",
+            "option_4": "TypeError",
+            "correct_answer": "True",
+            "category": 1,
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which function returns the absolute value of a number?",
+            "option_1": "absolute()",
+            "option_2": "abs()",
+            "option_3": "fabs()",
+            "option_4": "magnitude()",
+            "correct_answer": "abs()",
+            "category": 1,
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "How do you create an empty dictionary?",
+            "option_1": "dict = []",
+            "option_2": "dict = ()",
+            "option_3": "dict = {}",
+            "option_4": "dict = new Dictionary()",
+            "correct_answer": "dict = {}",
+            "category": 1,
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the output of print(isinstance(4, int))?",
+            "option_1": "4",
+            "option_2": "True",
+            "option_3": "False",
+            "option_4": "TypeError",
+            "correct_answer": "True",
+            "category": 1,
+            "difficulty": "Easy"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What will be the output of print(1 == True)?",
+            "option_1": "True",
+            "option_2": "False",
+            "option_3": "'1'",
+            "option_4": "'True'",
+            "correct_answer": "True",
+            "category": "1",
+            
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which of the following methods can be used to add an element to a list?",
+            "option_1": "add()",
+            "option_2": "append()",
+            "option_3": "insert()",
+            "option_4": "All of the above",
+            "correct_answer": "All of the above",
+            "category": "1",
+            
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the purpose of the 'self' keyword in a method?",
+            "option_1": "To refer to the class itself",
+            "option_2": "To refer to the instance of the class",
+            "option_3": "To refer to the parent class",
+            "option_4": "'self' has no purpose",
+            "correct_answer": "To refer to the instance of the class",
+            "category": "1",
+            
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What will be the output of print(type([]))?",
+            "option_1": "<class 'list'>",
+            "option_2": "<class 'dict'>",
+            "option_3": "<class 'tuple'>",
+            "option_4": "<class 'set'>",
+            "correct_answer": "<class 'list'>",
+            "category": "1",
+            
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which decorator is used to define a method in a class that operates on the class itself rather than instances?",
+            "option_1": "@static",
+            "option_2": "@classmethod",
+            "option_3": "@method",
+            "option_4": "@decorator",
+            "correct_answer": "@classmethod",
+            "category": "1",
+            
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What does the 'yield' keyword do in Python?",
+            "option_1": "Stops a function",
+            "option_2": "Creates a generator",
+            "option_3": "Raises an exception",
+            "option_4": "Returns a value",
+            "correct_answer": "Creates a generator",
+            "category": "1",
+            
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "How do you create a deep copy of a list in Python?",
+            "option_1": "list.copy()",
+            "option_2": "copy.deepcopy(list)",
+            "option_3": "list.deep_copy()",
+            "option_4": "copy(list)",
+            "correct_answer": "copy.deepcopy(list)",
+            "category": "1",
+            
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the output of print(list(map(lambda x: x*2, [1, 2, 3, 4])))?",
+            "option_1": "[1, 2, 3, 4]",
+            "option_2": "[2, 4, 6, 8]",
+            "option_3": "(2, 4, 6, 8)",
+            "option_4": "TypeError",
+            "correct_answer": "[2, 4, 6, 8]",
+            "category": "1",
+            
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which method is used to merge two dictionaries in Python 3.9+?",
+            "option_1": "merge()",
+            "option_2": "update()",
+            "option_3": "|",
+            "option_4": "combine()",
+            "correct_answer": "|",
+            "category": "1",
+            
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What does the 'nonlocal' keyword do?",
+            "option_1": "Declares a global variable",
+            "option_2": "Refers to a variable in the outer (enclosing) scope",
+            "option_3": "Creates a new local variable",
+            "option_4": "Prevents variable modification",
+            "correct_answer": "Refers to a variable in the outer (enclosing) scope",
+            "category": "1",
+            
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the difference between '==' and 'is' operators?",
+            "option_1": "They are exactly the same",
+            "option_2": "'==' checks value, 'is' checks identity",
+            "option_3": "'is' checks value, '==' checks identity",
+            "option_4": "No difference",
+            "correct_answer": "'==' checks value, 'is' checks identity",
+            "category": "1",
+            
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "How do you convert a generator to a list?",
+            "option_1": "list.convert()",
+            "option_2": "generator.to_list()",
+            "option_3": "list(generator)",
+            "option_4": "convert(generator)",
+            "correct_answer": "list(generator)",
+            "category": "1",
+            
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What does the '*args' syntax do in a function definition?",
+            "option_1": "Creates a tuple of arguments",
+            "option_2": "Limits the number of arguments",
+            "option_3": "Prevents argument passing",
+            "option_4": "Raises an error",
+            "correct_answer": "Creates a tuple of arguments",
+            "category": "1",
+            
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "Which method is used to create an iterator from an iterable?",
+            "option_1": "iterator()",
+            "option_2": "iter()",
+            "option_3": "create_iterator()",
+            "option_4": "make_iterator()",
+            "correct_answer": "iter()",
+            "category": "1",
+            
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What does the 'zip()' function do?",
+            "option_1": "Combines two lists into a single list",
+            "option_2": "Creates a compressed file",
+            "option_3": "Combines multiple iterables element-wise",
+            "option_4": "Sorts a list",
+            "correct_answer": "Combines multiple iterables element-wise",
+            "category": "1",
+            
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is a decorator in Python?",
+            "option_1": "A way to modify a function's behavior",
+            "option_2": "A type of list comprehension",
+            "option_3": "A method to create classes",
+            "option_4": "A way to handle exceptions",
+            "correct_answer": "A way to modify a function's behavior",
+            "category": "1",
+            
+            "difficulty": "Medium"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the output of print([] == False)?",
+            "option_1": "True",
+            "option_2": "False",
+            "option_3": "None",
+            "option_4": "TypeError",
+            "correct_answer": "False",
+            "category": "1",
+            
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "How does Python's metaclass mechanism work?",
+            "option_1": "It creates classes dynamically at runtime",
+            "option_2": "It controls class creation process",
+            "option_3": "It defines how a class is constructed",
+            "option_4": "All of the above",
+            "correct_answer": "All of the above",
+            "category": "1",
+            
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the difference between __getattr__ and __getattribute__?",
+            "option_1": "They are exactly the same method",
+            "option_2": "__getattr__ is called only if the attribute doesn't exist, __getattribute__ is called for every attribute access",
+            "option_3": "__getattribute__ is called only for non-existing attributes",
+            "option_4": "No significant difference",
+            "correct_answer": "__getattr__ is called only if the attribute doesn't exist, __getattribute__ is called for every attribute access",
+            "category": "1",
+            
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What does the following code do? a = lambda x: (yield x)",
+            "option_1": "Creates a lambda function that returns x",
+            "option_2": "Creates a generator function",
+            "option_3": "Creates a lambda function that yields x",
+            "option_4": "Raises a SyntaxError",
+            "correct_answer": "Creates a generator function",
+            "category": "1",
+            
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "How does method resolution order (MRO) work in multiple inheritance?",
+            "option_1": "Left-to-right depth-first search",
+            "option_2": "C3 linearization algorithm",
+            "option_3": "Breadth-first search",
+            "option_4": "Random selection",
+            "correct_answer": "C3 linearization algorithm",
+            "category": "1",
+            
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is a descriptor in Python?",
+            "option_1": "A way to customize attribute access",
+            "option_2": "A type of class decorator",
+            "option_3": "A method to validate input",
+            "option_4": "A function that modifies methods",
+            "correct_answer": "A way to customize attribute access",
+            "category": "1",
+            
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What does the *args and **kwargs syntax allow in function definitions?",
+            "option_1": "Limit the number of arguments",
+            "option_2": "Pass a variable number of positional and keyword arguments",
+            "option_3": "Create optional arguments",
+            "option_4": "Prevent argument passing",
+            "correct_answer": "Pass a variable number of positional and keyword arguments",
+            "category": "1",
+            
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the purpose of the __slots__ attribute in a class?",
+            "option_1": "To define allowed methods",
+            "option_2": "To reduce memory consumption",
+            "option_3": "To prevent attribute creation",
+            "option_4": "To create class-level constants",
+            "correct_answer": "To reduce memory consumption",
+            "category": "1",
+            
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "How does Python implement garbage collection?",
+            "option_1": "Reference counting",
+            "option_2": "Mark and sweep algorithm",
+            "option_3": "Combination of reference counting and generational garbage collection",
+            "option_4": "Manual memory management",
+            "correct_answer": "Combination of reference counting and generational garbage collection",
+            "category": "1",
+            
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the difference between @staticmethod and @classmethod in Python?",
+            "option_1": "@staticmethod works with instance variables, @classmethod works with class variables",
+            "option_2": "@staticmethod is bound to the class, @classmethod is bound to the instance",
+            "option_3": "@staticmethod does not take a self or cls argument, @classmethod does",
+            "option_4": "@staticmethod is used for instance methods, @classmethod for static methods",
+            "correct_answer": "@staticmethod does not take a self or cls argument, @classmethod does",
+            "category": "1",
+            
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "How do you define a metaclass in Python?",
+            "option_1": "By subclassing from the type class",
+            "option_2": "By using the __metaclass__ attribute",
+            "option_3": "By using the class keyword",
+            "option_4": "By using a decorator",
+            "correct_answer": "By subclassing from the type class",
+            "category": "1",
+            
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What does the yield keyword do in Python?",
+            "option_1": "It raises an exception",
+            "option_2": "It suspends the function and returns a generator",
+            "option_3": "It defines a static method",
+            "option_4": "It defines a class method",
+            "correct_answer": "It suspends the function and returns a generator",
+            "category": "1",
+            
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the purpose of the __call__ method in Python?",
+            "option_1": "To define an instance method",
+            "option_2": "To define a class method",
+            "option_3": "To make an instance callable like a function",
+            "option_4": "To define a static method",
+            "correct_answer": "To make an instance callable like a function",
+            "category": "1",
+            
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the difference between deep copy and shallow copy in Python?",
+            "option_1": "Shallow copy creates a new object, deep copy does not",
+            "option_2": "Shallow copy only copies the reference of objects, deep copy copies the objects themselves",
+            "option_3": "Deep copy is faster than shallow copy",
+            "option_4": "There is no difference",
+            "correct_answer": "Shallow copy only copies the reference of objects, deep copy copies the objects themselves",
+            "category": "1",
+            
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the purpose of the with statement in Python?",
+            "option_1": "It defines a context manager to handle resources",
+            "option_2": "It runs a function in a separate thread",
+            "option_3": "It defines an alias for an import",
+            "option_4": "It catches exceptions",
+            "correct_answer": "It defines a context manager to handle resources",
+            "category": "1",
+            
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the purpose of the __slots__ mechanism in Python?",
+            "option_1": "It allows for dynamic addition of attributes",
+            "option_2": "It prevents the creation of new attributes",
+            "option_3": "It reduces memory usage by storing attributes in a fixed structure",
+            "option_4": "It allows defining class-level constants",
+            "correct_answer": "It reduces memory usage by storing attributes in a fixed structure",
+            "category": "1",
+            
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is a generator expression in Python?",
+            "option_1": "A function that returns a value",
+            "option_2": "An iterable that yields values one at a time",
+            "option_3": "A syntax error",
+            "option_4": "A special type of function with return statements",
+            "correct_answer": "An iterable that yields values one at a time",
+            "category": "1",
+            
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the significance of the Global Interpreter Lock (GIL) in Python?",
+            "option_1": "It allows multiple threads to execute Python bytecodes in parallel",
+            "option_2": "It limits the execution of Python code to one thread at a time",
+            "option_3": "It prevents memory leaks",
+            "option_4": "It manages memory allocations",
+            "correct_answer": "It limits the execution of Python code to one thread at a time",
+            "category": "1",
+            
+            "difficulty": "Hard"
+        }
+    },
+    {
+        "model": "quiz.Question",
+        "fields": {
+            "question": "What is the difference between a class method and a static method in Python?",
+            "option_1": "Class methods are bound to the instance, static methods are bound to the class",
+            "option_2": "Class methods can access the class, static methods cannot",
+            "option_3": "Static methods can access both the instance and class",
+            "option_4": "There is no difference",
+            "correct_answer": "Class methods can access the class, static methods cannot",
+            "category": "1",
+            
+            "difficulty": "Hard"
+        }
+    }
+
+]

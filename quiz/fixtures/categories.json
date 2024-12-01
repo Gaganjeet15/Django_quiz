@@ -1,0 +1,20 @@
+[
+    {
+        "model": "quiz.category",
+        "fields": {
+            "name": "Python"
+        }
+    },
+    {
+        "model": "quiz.category",
+        "fields": {
+            "name": "Java"
+        }
+    },
+    {
+        "model": "quiz.category",
+        "fields": {
+            "name": "C"
+        }
+    }
+]
