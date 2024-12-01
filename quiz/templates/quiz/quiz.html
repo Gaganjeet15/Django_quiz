@@ -8,148 +8,220 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" />
     <style>
+      html, body {
+        background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+        color: white;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        background-attachment: fixed;
+      }
+
+      .quiz-container {
+        background: rgba(30, 41, 59, 0.7);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(148, 163, 184, 0.1);
+        box-shadow: 0 8px 32px rgba(30, 41, 59, 0.4);
+      }
+
       .option-box {
-        border: 1px solid #e5e7eb;
-        border-radius: 8px;
-        padding: 12px 16px;
+        border: 1px solid rgba(148, 163, 184, 0.2);
+        border-radius: 12px;
+        padding: 14px 18px;
         margin-bottom: 12px;
         cursor: pointer;
         position: relative;
-        background-color: #f3f4f6;
-        transition: all 0.2s ease;
+        background-color: rgba(51, 65, 85, 0.5);
+        transition: all 0.3s ease;
       }
 
       .option-box:hover {
-        background-color: #e5e7eb;
+        background-color: rgba(71, 85, 105, 0.6);
+        box-shadow: 0 0 15px rgba(99, 102, 241, 0.2);
+        border-color: rgba(99, 102, 241, 0.4);
+        transform: translateY(-2px);
       }
 
       .option-box.selected {
-        background-color: #dbeafe;
-        border-color: #3b82f6;
+        background-color: rgba(67, 56, 202, 0.4);
+        border-color: #818cf8;
+        box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
       }
 
       .correct-answer {
-        background-color: #ecfdf5 !important;
-        border: 1px solid #059669 !important;
+        background-color: rgba(21, 128, 61, 0.4) !important;
+        border: 1px solid #4ade80 !important;
+        box-shadow: 0 0 20px rgba(74, 222, 128, 0.3) !important;
       }
 
       .incorrect-answer {
-        background-color: #fef2f2 !important;
-        border: 1px solid #dc2626 !important;
+        background-color: rgba(185, 28, 28, 0.4) !important;
+        border: 1px solid #f87171 !important;
+        box-shadow: 0 0 20px rgba(248, 113, 113, 0.3) !important;
       }
 
-      .selected-label {
-        position: absolute;
-        right: 16px;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 0.875rem;
-        color: #6b7280;
+      .submit-button {
+        background: linear-gradient(135deg, #4f46e5 0%, #818cf8 100%);
+        transition: all 0.3s ease;
+      }
+
+      .submit-button:hover {
+        opacity: 0.95;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+      }
+
+      .answer-more-button {
+        background: linear-gradient(135deg, #059669, #34d399);
+        transition: all 0.3s ease;
+      }
+
+      .answer-more-button:hover {
+        opacity: 0.95;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(52, 211, 153, 0.4);
+      }
+
+      .end-quiz-button {
+        background: linear-gradient(135deg, #dc2626, #f87171);
+        transition: all 0.3s ease;
+      }
+
+      .end-quiz-button:hover {
+        opacity: 0.95;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(248, 113, 113, 0.4);
+      }
+
+      h1 {
+        background: linear-gradient(135deg, #6366f1 0%, #a5b4fc 100%);
+        -webkit-text-fill-color: transparent;
+        font-size: 2.5rem;
+        font-weight: bold;
       }
 
       .check-icon {
-        color: #059669;
+        color: #4ade80;
         margin-right: 8px;
       }
 
       .x-icon {
-        color: #dc2626;
+        color: #f87171;
         margin-right: 8px;
       }
+      .text-3xl {
+    font-size: 3.875rem;
+    line-height: 5.10rem;
+}
+
+
     </style>
   </head>
-  <body class="bg-gray-100">
-    <div class="container mx-auto my-8 max-w-3xl bg-white shadow-md rounded-lg p-6">
-      <h1 class="text-3xl font-bold text-gray-800 mb-6">
-        {{ category|default:"All Categories" }} Quiz
-      </h1>
+  <body>
+    <div class="container mx-auto my-8 max-w-3xl">
+      <div class="quiz-container shadow-md rounded-lg p-6">
+        <h1 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500 mb-6 text-center">
+          {{ category|default:"All Categories" }} Quiz
+        </h1>
+        
+        <!-- Debug info -->
+        <p class="text-sm text-gray-400 mb-4">Total Questions: {{ total_questions }}</p>
 
-      <form id="quiz-form" method="POST">
-        {% csrf_token %}
-        {% for question in questions %}
-        <input type="hidden" name="current_question_id" value="{{ question.id }}">
-        <div class="mb-8 question-container">
-          <h3 class="text-lg font-semibold text-gray-700 mb-4">
-            {{ question.question }}
-          </h3>
-
-          <!-- Options -->
-          <div class="space-y-3">
-            {% for option in question.options %}
-            <div class="option-box {% if question.feedback %}
-                       {% if question.feedback.correct_answer == option %}correct-answer
-                       {% elif question.feedback.user_answer == option and not question.feedback.is_correct %}incorrect-answer
-                       {% endif %}
-                       {% endif %}"
-                 onclick="selectOption(this)">
-              <input
-                type="radio"
-                name="question_{{ question.id }}"
-                value="{{ option }}"
-                id="q{{ question.id }}_{{ forloop.counter }}"
-                class="hidden" />
-              <label for="q{{ question.id }}_{{ forloop.counter }}" class="cursor-pointer flex items-center">
-                {% if question.feedback %}
-                  {% if question.feedback.correct_answer == option %}
-                    <span class="check-icon">✓</span>
-                  {% elif question.feedback.user_answer == option and not question.feedback.is_correct %}
-                    <span class="x-icon">✗</span>
-                  {% endif %}
-                {% endif %}
-                {{ option }}
-                {% if question.feedback and question.feedback.user_answer == option %}
-                  <span class="selected-label">Your Selection</span>
-                {% endif %}
-              </label>
+        <form method="POST" class="space-y-6">
+          {% csrf_token %}
+          {% for question in questions %}
+            <div class="mb-8">
+              <h3 class="text-lg font-semibold mb-4">{{ forloop.counter }}. {{ question.question }}</h3>
+              {% for option in question.options %}
+                <div class="option-box mb-2 p-3 rounded 
+                    {% if show_results %}
+                        {% if option == question.correct_answer %}
+                            correct-answer
+                        {% elif option == question.user_answer and not question.is_correct %}
+                            incorrect-answer
+                        {% endif %}
+                    {% endif %}"
+                     onclick="selectOption(this)">
+                  <label class="flex items-center cursor-pointer w-full">
+                    <input type="radio" 
+                           name="question_{{ question.id }}" 
+                           value="{{ option }}"
+                           {% if option == question.user_answer %}checked{% endif %}
+                           {% if show_results %}disabled{% endif %}
+                           class="hidden">
+                    <span class="ml-2">{{ option }}</span>
+                    {% if show_results %}
+                        {% if option == question.correct_answer %}
+                            <span class="ml-2 text-green-500">✓</span>
+                        {% elif option == question.user_answer and not question.is_correct %}
+                            <span class="ml-2 text-red-500">✗</span>
+                        {% endif %}
+                    {% endif %}
+                  </label>
+                </div>
+              {% endfor %}
             </div>
-            {% endfor %}
-          </div>
-        </div>
-        {% endfor %}
+          {% endfor %}
 
-        <!-- Submit Button (show only when no feedback) -->
-        {% if not show_next_options %}
-        <button
-          type="submit"
-          class="w-full px-4 py-2 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition-colors duration-200">
-          Submit Answer
-        </button>
-        {% endif %}
-
-        <!-- Buttons for "Answer More" and "End Quiz" (show only after feedback) -->
-        {% if show_next_options %}
-        <div class="mt-6 flex justify-between">
-          <a
-            href="{% url 'quiz' %}{% if category != 'All Categories' %}?category={{ category }}{% endif %}"
-            class="px-4 py-2 bg-green-600 text-white font-semibold rounded-md hover:bg-green-700 transition-colors duration-200">
-            Answer More
-          </a>
-          <a
-            href="{% url 'dashboard' %}"
-            class="px-4 py-2 bg-red-600 text-white font-semibold rounded-md hover:bg-red-700 transition-colors duration-200">
-            End Quiz
-          </a>
-        </div>
-        {% endif %}
-      </form>
+          {% if not show_results %}
+            <button type="submit" class="w-full bg-purple-600 text-white p-3 rounded-md hover:bg-purple-700">
+              Submit Quiz
+            </button>
+          {% else %}
+            <div class="flex justify-between mt-6">
+              <a href="{% url 'quiz' %}?new_quiz=true" class="bg-blue-600 text-white p-3 rounded-md hover:bg-blue-700">
+                Try Another Quiz
+              </a>
+              <a href="{% url 'dashboard' %}" class="bg-gray-600 text-white p-3 rounded-md hover:bg-gray-700">
+                Back to Dashboard
+              </a>
+            </div>
+          {% endif %}
+        </form>
+      </div>
     </div>
 
     <script>
-      function selectOption(selected) {
-        // Remove selection from all options
-        const options = document.querySelectorAll('.option-box');
-        options.forEach(option => {
-          option.classList.remove('selected');
+      function selectOption(optionBox) {
+        // Get the question container
+        const questionContainer = optionBox.closest('.mb-8');
+        
+        // Remove selected class from all options in this question
+        questionContainer.querySelectorAll('.option-box').forEach(box => {
+          box.classList.remove('selected');
         });
         
-        // Add selection to clicked option
-        if (!selected.classList.contains('correct-answer') && !selected.classList.contains('incorrect-answer')) {
-          selected.classList.add('selected');
-        }
+        // Add selected class to clicked option
+        optionBox.classList.add('selected');
         
         // Check the radio input
-        const radio = selected.querySelector('input[type="radio"]');
+        const radio = optionBox.querySelector('input[type="radio"]');
         radio.checked = true;
+      }
+
+      // Add click event listeners to all option boxes
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.option-box').forEach(box => {
+          box.addEventListener('click', function() {
+            selectOption(this);
+          });
+        });
+      });
+
+      function validateForm() {
+        const form = document.getElementById('quiz-form');
+        const questions = form.querySelectorAll('.question-container');
+        let allAnswered = true;
+        
+        questions.forEach((question, index) => {
+          const answered = question.querySelector('input[type="radio"]:checked');
+          if (!answered) {
+            allAnswered = false;
+            alert(`Please answer question ${index + 1}`);
+          }
+        });
+        
+        return allAnswered;
       }
     </script>
   </body>

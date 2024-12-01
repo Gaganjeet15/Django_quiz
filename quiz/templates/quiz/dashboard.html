@@ -8,77 +8,182 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" />
     <style>
-      .stat-card {
-        background: white;
-        border-radius: 10px;
-        padding: 1.5rem;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: transform 0.2s;
+      body {
+        background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+        color: white;
+        min-height: 100vh;
       }
+      
+      .stat-card {
+        background: rgba(30, 41, 59, 0.7);
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        padding: 1.5rem;
+        border: 1px solid rgba(148, 163, 184, 0.1);
+        box-shadow: 0 8px 32px rgba(30, 41, 59, 0.4);
+        transition: all 0.3s ease;
+      }
+      
       .stat-card:hover {
         transform: translateY(-5px);
+        box-shadow: 0 12px 40px rgba(99, 102, 241, 0.3);
+        border: 1px solid rgba(99, 102, 241, 0.2);
       }
+      
       .stat-number {
-        font-size: 2.5rem;
+        font-size: 3rem;
         font-weight: bold;
-        color: #3b82f6;
+        background: linear-gradient(135deg, #6366f1 0%, #a5b4fc 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: 1;
+        margin-bottom: 0.5rem;
       }
+      
       .stat-label {
-        color: #6b7280;
-        font-size: 1rem;
+        color: #94a3b8;
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+
+      .quiz-section {
+        background: rgba(30, 41, 59, 0.7);
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        border: 1px solid rgba(148, 163, 184, 0.1);
+        box-shadow: 0 8px 32px rgba(30, 41, 59, 0.4);
+      }
+
+      select {
+        background-color: rgba(51, 65, 85, 0.5);
+        color: white;
+        border: 1px solid rgba(148, 163, 184, 0.2);
+        transition: all 0.3s ease;
+      }
+
+      select:focus {
+        border-color: #818cf8;
+        box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+      }
+
+      .start-button {
+        background: linear-gradient(135deg, #4f46e5 0%, #818cf8 100%);
+        border: none;
+        transition: all 0.3s ease;
+      }
+
+      .start-button:hover {
+        opacity: 0.95;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+      }
+
+      .welcome-message {
+        font-size: 1.2rem;
+        color: #94a3b8;
+        text-align: center;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+      }
+
+      .header-gradient {
+        background: linear-gradient(135deg, #6366f1 0%, #a5b4fc 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .category-label {
+        color: #818cf8;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+      }
+
+      .floating-card {
+        animation: float 6s ease-in-out infinite;
       }
     </style>
   </head>
-  <body class="bg-gray-100">
-    <div class="container mx-auto px-4 py-8">
-      <div class="text-center mb-10">
-        <h1 class="text-4xl font-bold text-gray-800 mb-2">Quiz Dashboard</h1>
-        <p class="text-gray-600">Track your progress and start a new quiz!</p>
+  <body>
+    <div class="container mx-auto px-4 py-12">
+      <div class="text-center mb-12">
+        <h1 class="text-5xl font-bold header-gradient mb-4">
+          Quiz Dashboard
+        </h1>
+        <p class="welcome-message">
+          Welcome to your personalized quiz experience! Track your progress, challenge yourself,<br>
+          and become a master of knowledge.
+        </p>
       </div>
 
       <!-- Performance Statistics -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-        <!-- Total Questions Attempted -->
-        <div class="stat-card">
-          <div class="stat-number">{{ total_questions }}</div>
-          <div class="stat-label">Questions Attempted</div>
-        </div>
+      <div class="mb-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Total Questions Attempted -->
+          <div class="stat-card floating-card" style="animation-delay: 0s;">
+            <div class="stat-number">{{ total_questions }}</div>
+            <div class="stat-label">Questions Attempted</div>
+            <div class="mt-2 text-sm text-gray-400">Keep pushing your limits!</div>
+          </div>
 
-        <!-- Correct Answers -->
-        <div class="stat-card">
-          <div class="stat-number">{{ correct_answers }}</div>
-          <div class="stat-label">Correct Answers</div>
-        </div>
+          <!-- Correct Answers -->
+          <div class="stat-card floating-card" style="animation-delay: 0.2s;">
+            <div class="stat-number">{{ correct_answers }}</div>
+            <div class="stat-label">Correct Answers</div>
+            <div class="mt-2 text-sm text-gray-400">Great job!</div>
+          </div>
 
-        <!-- Overall Accuracy -->
-        <div class="stat-card">
-          <div class="stat-number">{{ accuracy }}%</div>
-          <div class="stat-label">Overall Accuracy</div>
+          <!-- Overall Accuracy -->
+          <div class="stat-card floating-card" style="animation-delay: 0.4s;">
+            <div class="stat-number">{{ accuracy }}%</div>
+            <div class="stat-label">Overall Accuracy</div>
+            <div class="mt-2 text-sm text-gray-400">Your mastery level</div>
+          </div>
         </div>
       </div>
 
+      <!-- Add this after the stats cards and before the quiz section -->
+      <div class="text-center mb-8">
+        <form action="{% url 'reset_progress' %}" method="POST" class="inline-block">
+          {% csrf_token %}
+          <button type="submit" 
+                  onclick="return confirm('Are you sure you want to reset your progress? This cannot be undone.')"
+                  class="px-6 py-3 rounded-lg font-semibold text-white bg-red-600 hover:bg-red-700 transition-all transform hover:scale-105 hover:shadow-lg">
+            Reset Progress
+          </button>
+        </form>
+      </div>
+
       <!-- Start New Quiz Section -->
-      <div class="bg-white rounded-lg shadow-md p-6">
-        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Start a New Quiz</h2>
-        <form action="{% url 'quiz' %}" method="GET" class="space-y-4">
-          <div class="space-y-2">
-            <label for="category-select" class="block text-gray-700 font-medium">
-              Select Category:
+      <div class="quiz-section p-8 max-w-2xl mx-auto">
+        <h2 class="text-3xl font-bold header-gradient mb-6 text-center">
+          Start a New Quiz
+        </h2>
+        <form action="{% url 'quiz' %}" method="GET" class="space-y-6">
+          <div class="space-y-3">
+            <label for="category-select" class="category-label block">
+              Select Your Challenge:
             </label>
             <select
               id="category-select"
               name="category"
-              class="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-              <option value="">All Categories</option>
+              class="w-full p-3 rounded-lg focus:outline-none text-lg">
+              <option value="All Categories">All Categories</option>
               {% for category in categories %}
                 <option value="{{ category.name }}">{{ category.name }}</option>
               {% endfor %}
             </select>
           </div>
+          <input type="hidden" name="new_quiz" value="true">
           <button
             type="submit"
-            class="w-full bg-blue-600 text-white py-3 px-4 rounded-md hover:bg-blue-700 transition-colors duration-200 font-semibold">
-            Start Quiz
+            class="start-button w-full text-white py-4 px-6 rounded-lg font-bold text-lg transform hover:scale-105 transition-all">
+            Begin Your Journey
           </button>
         </form>
       </div>
