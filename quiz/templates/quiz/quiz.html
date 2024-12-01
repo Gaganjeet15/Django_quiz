@@ -1,84 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css">
-  <style>
-    .correct {
-      background-color: #d1fae5; /* Green */
-      border-color: #10b981;
-    }
-    .incorrect {
-      background-color: #fee2e2; /* Red */
-      border-color: #ef4444;
-    }
-  </style>
-</head>
-<body>
-  <div class="container mx-auto my-8 max-w-3xl">
-    <h1 class="text-2xl font-bold mb-4">Quiz</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ category|default:"All Categories" }} Quiz</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" />
+    <style>
+      .correct {
+        background-color: #d1fae5; /* Green */
+        border-color: #10b981;
+      }
+      .incorrect {
+        background-color: #fee2e2; /* Red */
+        border-color: #ef4444;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mx-auto my-8 max-w-3xl">
+      <h1 class="text-2xl font-bold mb-4">
+        {{ category|default:"All Categories" }} Quiz
+      </h1>
 
-    <form id="quiz-form">
-      {% csrf_token %}
-      {% for question in questions %}
+      <form id="quiz-form" method="POST">
+        {% csrf_token %}
+        {% for question in questions %}
         <div class="mb-6">
-          <h2 class="text-lg font-semibold">{{ question.question }}</h2>
+          <h3 class="text-lg font-semibold">{{ question.question }}</h3>
           <div class="space-y-2 mt-2">
-            {% for option in question.options %}
-              <div>
-                <input 
-                  type="radio" 
-                  name="question_{{ question.id }}" 
-                  value="{{ option }}" 
-                  id="q{{ question.id }}_{{ forloop.counter }}" 
-                  class="hidden">
-                <label 
-                  for="q{{ question.id }}_{{ forloop.counter }}" 
-                  class="block w-full p-2 border rounded-md cursor-pointer bg-gray-50 hover:bg-gray-100">
-                  {{ option }}
-                </label>
-              </div>
-            {% endfor %}
+            <div>
+              <input
+                type="radio"
+                name="question_{{ question.id }}"
+                value="{{ question.options.0 }}"
+                id="q{{ question.id }}_1"
+                class="hidden" />
+              <label
+                for="q{{ question.id }}_1"
+                class="block w-full p-2 border rounded-md cursor-pointer bg-gray-50 hover:bg-gray-100">
+                {{ question.options.0 }}
+              </label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="question_{{ question.id }}"
+                value="{{ question.options.1 }}"
+                id="q{{ question.id }}_2"
+                class="hidden" />
+              <label
+                for="q{{ question.id }}_2"
+                class="block w-full p-2 border rounded-md cursor-pointer bg-gray-50 hover:bg-gray-100">
+                {{ question.options.1 }}
+              </label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="question_{{ question.id }}"
+                value="{{ question.options.2 }}"
+                id="q{{ question.id }}_3"
+                class="hidden" />
+              <label
+                for="q{{ question.id }}_3"
+                class="block w-full p-2 border rounded-md cursor-pointer bg-gray-50 hover:bg-gray-100">
+                {{ question.options.2 }}
+              </label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="question_{{ question.id }}"
+                value="{{ question.options.3 }}"
+                id="q{{ question.id }}_4"
+                class="hidden" />
+              <label
+                for="q{{ question.id }}_4"
+                class="block w-full p-2 border rounded-md cursor-pointer bg-gray-50 hover:bg-gray-100">
+                {{ question.options.3 }}
+              </label>
+            </div>
           </div>
         </div>
-      {% endfor %}
-      <button type="button" id="submit-quiz" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700">Submit</button>
-    </form>
-  </div>
-
-  <script>
-    document.getElementById('submit-quiz').addEventListener('click', function () {
-      const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
-      const formData = new FormData(document.getElementById('quiz-form'));
-
-      fetch("{% url 'quiz' %}", {
-        method: 'POST',
-        headers: {
-          'X-CSRFToken': csrfToken,
-        },
-        body: formData,
-      })
-      .then(response => response.json())
-      .then(data => {
-        // Apply feedback for each question
-        for (const questionId in data) {
-          const feedback = data[questionId];
-          const options = document.querySelectorAll(`[name="question_${questionId}"]`);
-          options.forEach(option => {
-            const label = option.nextElementSibling;
-            if (option.value === feedback.correct_answer) {
-              label.classList.add('correct');
-            } else if (option.checked) {
-              label.classList.add('incorrect');
-            }
-            option.disabled = true; // Disable further selection
-          });
-        }
-      })
-      .catch(error => console.error('Error:', error));
-    });
-  </script>
-</body>
+        {% endfor %}
+        <button
+          type="submit"
+          class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700">
+          Submit
+        </button>
+      </form>
+    </div>
+  </body>
 </html>
