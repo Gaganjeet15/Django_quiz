@@ -1,31 +1,62 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Question, UserPerformance
-from django.contrib.auth.models import User
+from .forms import QuizForm
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_protect
+from django.core.exceptions import ObjectDoesNotExist
 
-# Dashboard view (to show the landing page for the quiz)
 def dashboard(request):
     return render(request, 'quiz/dashboard.html')
 
-# Quiz view (to display the question and handle the quiz submission)
+
+
+@csrf_protect
 def quiz(request):
-    question = Question.objects.order_by('?').first()  # Get a random question
+    try:
+        # Fetch all questions
+        questions = Question.objects.all()
 
-    if request.method == 'POST':
-        selected_option = request.POST.get('answer')  # Get the selected option from the form
-        is_correct = selected_option == question.correct_answer  # Check if the selected answer is correct
+        # Prepare questions with their options
+        questions_with_options = [
+            {
+                'id': question.id,
+                'question': question.question,
+                'options': [question.option_1, question.option_2, question.option_3, question.option_4],
+            }
+            for question in questions
+        ]
 
-        # Optionally, store the user's performance (if required)
-        if request.user.is_authenticated:
-            UserPerformance.objects.create(
-                user=request.user,
-                question=question,
-                answer_given=selected_option,
-                is_correct=is_correct
-            )
+        if request.method == 'POST':
+            responses = {}
+            for question_id, selected_option in request.POST.items():
+                if question_id.startswith('question_'):
+                    question_id = question_id.split('_')[1]  # Extract question ID
+                    try:
+                        question = Question.objects.get(id=question_id)
+                        responses[question.id] = {
+                            'selected_option': selected_option,
+                            'correct_answer': question.correct_answer,
+                            'is_correct': selected_option == question.correct_answer
+                        }
+                    except ObjectDoesNotExist:
+                        return JsonResponse({'error': f"Question with ID {question_id} not found"}, status=400)
 
-        return render(request, 'quiz/quiz.html', {
-            'question': question,
-            'is_correct': is_correct
-        })
+            return JsonResponse(responses, safe=False)
 
-    return render(request, 'quiz/quiz.html', {'question': question})
+        # Pass all questions and options to the template
+        return render(request, 'quiz/quiz.html', {'questions': questions_with_options})
+
+    except Exception as e:
+        return JsonResponse({'error': str(e)}, status=500)
+
+
+def quiz_result(request):
+    user_performance = UserPerformance.objects.filter(user=request.user)
+
+    total_questions = user_performance.count()
+    correct_answers = user_performance.filter(is_correct=True).count()
+
+    return render(request, 'quiz/result.html', {
+        'score': correct_answers,
+        'total_questions': total_questions
+    })

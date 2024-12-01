@@ -25,7 +25,7 @@ class Question(models.Model):
         ('Hard', 'Hard'),
     ]
     
-    question_text = models.TextField()
+    question = models.CharField(max_length=200)
     option_1 = models.CharField(max_length=255)
     option_2 = models.CharField(max_length=255)
     option_3 = models.CharField(max_length=255)
@@ -35,7 +35,7 @@ class Question(models.Model):
     difficulty = models.CharField(max_length=6, choices=DIFFICULTY_CHOICES)
     
     def __str__(self):
-        return self.question_text
+        return self.question
 
 # Model to track user's performance in quizzes
 class UserPerformance(models.Model):

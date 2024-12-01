@@ -1,39 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css">
+  <style>
+    .correct {
+      background-color: #d1fae5; /* Green */
+      border-color: #10b981;
+    }
+    .incorrect {
+      background-color: #fee2e2; /* Red */
+      border-color: #ef4444;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>{{ question.question_text }}</h1>
-        <form method="POST">
-            {% csrf_token %}
-            <div class="form-check">
-                <input type="radio" class="form-check-input" name="answer" value="{{ question.option_1 }}" required>
-                <label class="form-check-label">{{ question.option_1 }}</label>
-            </div>
-            <div class="form-check">
-                <input type="radio" class="form-check-input" name="answer" value="{{ question.option_2 }}" required>
-                <label class="form-check-label">{{ question.option_2 }}</label>
-            </div>
-            <div class="form-check">
-                <input type="radio" class="form-check-input" name="answer" value="{{ question.option_3 }}" required>
-                <label class="form-check-label">{{ question.option_3 }}</label>
-            </div>
-            <div class="form-check">
-                <input type="radio" class="form-check-input" name="answer" value="{{ question.option_4 }}" required>
-                <label class="form-check-label">{{ question.option_4 }}</label>
-            </div>
+  <div class="container mx-auto my-8 max-w-3xl">
+    <h1 class="text-2xl font-bold mb-4">Quiz</h1>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+    <form id="quiz-form">
+      {% csrf_token %}
+      {% for question in questions %}
+        <div class="mb-6">
+          <h2 class="text-lg font-semibold">{{ question.question }}</h2>
+          <div class="space-y-2 mt-2">
+            {% for option in question.options %}
+              <div>
+                <input 
+                  type="radio" 
+                  name="question_{{ question.id }}" 
+                  value="{{ option }}" 
+                  id="q{{ question.id }}_{{ forloop.counter }}" 
+                  class="hidden">
+                <label 
+                  for="q{{ question.id }}_{{ forloop.counter }}" 
+                  class="block w-full p-2 border rounded-md cursor-pointer bg-gray-50 hover:bg-gray-100">
+                  {{ option }}
+                </label>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+      <button type="button" id="submit-quiz" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700">Submit</button>
+    </form>
+  </div>
 
-        {% if is_correct is not None %}
-            <p>{% if is_correct %}Correct!{% else %}Incorrect.{% endif %}</p>
-        {% endif %}
-    </div>
+  <script>
+    document.getElementById('submit-quiz').addEventListener('click', function () {
+      const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+      const formData = new FormData(document.getElementById('quiz-form'));
+
+      fetch("{% url 'quiz' %}", {
+        method: 'POST',
+        headers: {
+          'X-CSRFToken': csrfToken,
+        },
+        body: formData,
+      })
+      .then(response => response.json())
+      .then(data => {
+        // Apply feedback for each question
+        for (const questionId in data) {
+          const feedback = data[questionId];
+          const options = document.querySelectorAll(`[name="question_${questionId}"]`);
+          options.forEach(option => {
+            const label = option.nextElementSibling;
+            if (option.value === feedback.correct_answer) {
+              label.classList.add('correct');
+            } else if (option.checked) {
+              label.classList.add('incorrect');
+            }
+            option.disabled = true; // Disable further selection
+          });
+        }
+      })
+      .catch(error => console.error('Error:', error));
+    });
+  </script>
 </body>
 </html>
