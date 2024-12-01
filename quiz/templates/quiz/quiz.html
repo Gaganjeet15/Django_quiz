@@ -8,27 +8,53 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" />
     <style>
-      .correct {
-        background-color: #d1fae5; /* Green */
-        border: 2px solid #10b981;
+      .option-box {
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        padding: 12px 16px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        position: relative;
+        background-color: #f3f4f6;
+        transition: all 0.2s ease;
       }
-      .incorrect {
-        background-color: #fee2e2; /* Red */
-        border: 2px solid #ef4444;
+
+      .option-box:hover {
+        background-color: #e5e7eb;
       }
-      .default-option {
-        background-color: #ffd5a4; 
-        border: 1px solid #000000;
+
+      .option-box.selected {
+        background-color: #dbeafe;
+        border-color: #3b82f6;
       }
-      .selected-option {
-        background-color: #e5e7eb; /* Gray when selected */
+
+      .correct-answer {
+        background-color: #ecfdf5 !important;
+        border: 1px solid #059669 !important;
       }
-      .feedback {
-        border-left: 4px solid #10b981; /* Default green feedback */
-        padding-left: 8px;
+
+      .incorrect-answer {
+        background-color: #fef2f2 !important;
+        border: 1px solid #dc2626 !important;
       }
-      .feedback-incorrect {
-        border-left: 4px solid #ef4444; /* Red feedback */
+
+      .selected-label {
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 0.875rem;
+        color: #6b7280;
+      }
+
+      .check-icon {
+        color: #059669;
+        margin-right: 8px;
+      }
+
+      .x-icon {
+        color: #dc2626;
+        margin-right: 8px;
       }
     </style>
   </head>
@@ -41,84 +67,89 @@
       <form id="quiz-form" method="POST">
         {% csrf_token %}
         {% for question in questions %}
+        <input type="hidden" name="current_question_id" value="{{ question.id }}">
         <div class="mb-8 question-container">
-          <!-- Question -->
-          <h3 class="text-lg font-semibold text-gray-700 mb-3">
-            {{ forloop.counter }}. {{ question.question }}
+          <h3 class="text-lg font-semibold text-gray-700 mb-4">
+            {{ question.question }}
           </h3>
 
           <!-- Options -->
           <div class="space-y-3">
             {% for option in question.options %}
-            <div
-              class="block w-full p-3 rounded-md cursor-pointer transition-colors duration-200 default-option"
-              onclick="selectOption(this)">
+            <div class="option-box {% if question.feedback %}
+                       {% if question.feedback.correct_answer == option %}correct-answer
+                       {% elif question.feedback.user_answer == option and not question.feedback.is_correct %}incorrect-answer
+                       {% endif %}
+                       {% endif %}"
+                 onclick="selectOption(this)">
               <input
                 type="radio"
                 name="question_{{ question.id }}"
                 value="{{ option }}"
                 id="q{{ question.id }}_{{ forloop.counter }}"
                 class="hidden" />
-              <label for="q{{ question.id }}_{{ forloop.counter }}" class="cursor-pointer">
+              <label for="q{{ question.id }}_{{ forloop.counter }}" class="cursor-pointer flex items-center">
+                {% if question.feedback %}
+                  {% if question.feedback.correct_answer == option %}
+                    <span class="check-icon">✓</span>
+                  {% elif question.feedback.user_answer == option and not question.feedback.is_correct %}
+                    <span class="x-icon">✗</span>
+                  {% endif %}
+                {% endif %}
                 {{ option }}
+                {% if question.feedback and question.feedback.user_answer == option %}
+                  <span class="selected-label">Your Selection</span>
+                {% endif %}
               </label>
             </div>
             {% endfor %}
           </div>
-
-          <!-- Feedback -->
-          {% if question.feedback %}
-          <p
-            class="mt-3 text-sm font-medium feedback 
-            {% if not question.feedback.is_correct %}feedback-incorrect{% endif %}">
-            {% if question.feedback.is_correct %}
-            ✅ Correct! The answer is <strong>{{ question.feedback.correct_answer }}</strong>.
-            {% else %}
-            ❌ Incorrect. The correct answer is <strong>{{ question.feedback.correct_answer }}</strong>.
-            {% endif %}
-          </p>
-          {% endif %}
         </div>
         {% endfor %}
 
-        <!-- Submit Button -->
+        <!-- Submit Button (show only when no feedback) -->
+        {% if not show_next_options %}
         <button
           type="submit"
           class="w-full px-4 py-2 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition-colors duration-200">
-          Submit
+          Submit Answer
         </button>
+        {% endif %}
 
-        <!-- Buttons for "Answer More" and "End Quiz" -->
+        <!-- Buttons for "Answer More" and "End Quiz" (show only after feedback) -->
+        {% if show_next_options %}
         <div class="mt-6 flex justify-between">
-          <button
-            type="button"
-            id="answer-more-btn"
+          <a
+            href="{% url 'quiz' %}{% if category != 'All Categories' %}?category={{ category }}{% endif %}"
             class="px-4 py-2 bg-green-600 text-white font-semibold rounded-md hover:bg-green-700 transition-colors duration-200">
             Answer More
-          </button>
-
+          </a>
           <a
             href="{% url 'dashboard' %}"
             class="px-4 py-2 bg-red-600 text-white font-semibold rounded-md hover:bg-red-700 transition-colors duration-200">
             End Quiz
           </a>
         </div>
+        {% endif %}
       </form>
     </div>
 
     <script>
       function selectOption(selected) {
-        // Get the parent container of the selected option (the current question)
-        const questionContainer = selected.closest('.question-container');
-
-        // Remove 'selected-option' class from all options in this question
-        const options = questionContainer.querySelectorAll('.default-option');
+        // Remove selection from all options
+        const options = document.querySelectorAll('.option-box');
         options.forEach(option => {
-          option.classList.remove('selected-option');
+          option.classList.remove('selected');
         });
         
-        // Add 'selected-option' class to the clicked option
-        selected.classList.add('selected-option');
+        // Add selection to clicked option
+        if (!selected.classList.contains('correct-answer') && !selected.classList.contains('incorrect-answer')) {
+          selected.classList.add('selected');
+        }
+        
+        // Check the radio input
+        const radio = selected.querySelector('input[type="radio"]');
+        radio.checked = true;
       }
     </script>
   </body>
