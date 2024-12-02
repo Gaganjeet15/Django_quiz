@@ -133,29 +133,24 @@
             <div class="mb-8">
               <h3 class="text-lg font-semibold mb-4">{{ forloop.counter }}. {{ question.question }}</h3>
               {% for option in question.options %}
-                <div class="option-box mb-2 p-3 rounded 
-                    {% if show_results %}
-                        {% if option == question.correct_answer %}
-                            correct-answer
-                        {% elif option == question.user_answer and not question.is_correct %}
-                            incorrect-answer
-                        {% endif %}
-                    {% endif %}"
+                <div class="option-box mb-2 p-3 rounded {% if show_results %}
+                            {% if option == question.correct_answer %}correct-answer
+                            {% elif option == question.user_answer and not question.is_correct %}incorrect-answer
+                            {% endif %}
+                        {% endif %}"
                      onclick="selectOption(this)">
                   <label class="flex items-center cursor-pointer w-full">
                     <input type="radio" 
                            name="question_{{ question.id }}" 
                            value="{{ option }}"
-                           {% if option == question.user_answer %}checked{% endif %}
                            {% if show_results %}disabled{% endif %}
                            class="hidden">
                     <span class="ml-2">{{ option }}</span>
-                    {% if show_results %}
-                        {% if option == question.correct_answer %}
-                            <span class="ml-2 text-green-500">✓</span>
-                        {% elif option == question.user_answer and not question.is_correct %}
-                            <span class="ml-2 text-red-500">✗</span>
-                        {% endif %}
+                    {% if show_results and option == question.correct_answer %}
+                      <span class="ml-2 text-green-500">✓</span>
+                    {% endif %}
+                    {% if show_results and option == question.user_answer and not question.is_correct %}
+                      <span class="ml-2 text-red-500">✗</span>
                     {% endif %}
                   </label>
                 </div>
