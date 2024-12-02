@@ -53,7 +53,8 @@ def quiz(request):
                 'correct_answer': q.correct_answer,
                 'options': [q.option_1, q.option_2, q.option_3, q.option_4],
                 'user_answer': None,
-                'is_correct': None
+                'is_correct': None,
+                'difficulty': q.difficulty
             } for q in db_questions]
             request.session.modified = True
     
