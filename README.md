@@ -16,6 +16,17 @@ A dynamic quiz application built with Django that allows users to test their kno
 - 🔄 Option to retry category-specific quizzes
 - ⚡ Instant feedback with correct/incorrect indicators
 
+## Live Demo
+
+The application is live at: [https://gaganquiz.pythonanywhere.com/](https://gaganquiz.pythonanywhere.com/)
+
+To access the application:
+1. When prompted for login credentials:
+   - Username: `user`
+   - Password: `user12345`
+2. After logging in, remove "admin" from the URL
+3. Access the main application at: [https://gaganquiz.pythonanywhere.com/](https://gaganquiz.pythonanywhere.com/)
+
 ## Screenshots
 
 ### Dashboard
