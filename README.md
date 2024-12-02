@@ -16,6 +16,17 @@ A dynamic quiz application built with Django that allows users to test their kno
 - 🔄 Option to retry category-specific quizzes
 - ⚡ Instant feedback with correct/incorrect indicators
 
+## Live Demo
+
+The application is live at: [https://gaganquiz.pythonanywhere.com/](https://gaganquiz.pythonanywhere.com/)
+
+To access the application:
+1. When prompted for login credentials:
+   - Username: `user`
+   - Password: `user12345`
+2. After logging in, remove "admin" from the URL
+3. Access the main application at: [https://gaganquiz.pythonanywhere.com/](https://gaganquiz.pythonanywhere.com/)
+
 ## Screenshots
 
 ### Dashboard
@@ -26,14 +37,9 @@ A dynamic quiz application built with Django that allows users to test their kno
 ![Quiz](https://raw.githubusercontent.com/Gaganjeet15/Django_quiz/main/screenshots/quiz.png)
 *Interactive quiz interface with multiple choice questions*
 
-### Additional Feature
-![Another Quiz](https://raw.githubusercontent.com/Gaganjeet15/Django_quiz/main/screenshots/try_anotherQuiz.png)
-*Instant feedback with correct and incorrect answers highlighted*
-
-
 ### Results View
 ![Results](https://raw.githubusercontent.com/Gaganjeet15/Django_quiz/main/screenshots/results.png)
-*Result view in Dashboard*
+*Instant feedback with correct and incorrect answers highlighted*
 
 ## Technologies Used
 
@@ -86,7 +92,6 @@ A dynamic quiz application built with Django that allows users to test their kno
 
 ## Project Structure
 
-```
 quiz_project/
 ├── quiz/
 │   ├── models.py          # Database models (Question, Category)
@@ -97,7 +102,6 @@ quiz_project/
 │          ├── quiz.html
 │   
 └── requirements.txt      # Project dependencies
-```
 
 ## Database Models
 
@@ -139,6 +143,4 @@ quiz_project/
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
+THANKYOU FOR READING THIS README FILE.
