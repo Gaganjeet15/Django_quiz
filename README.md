@@ -67,6 +67,7 @@ A dynamic quiz application built with Django that allows users to test their kno
 
 ## Project Structure
 
+```
 quiz_project/
 ├── quiz/
 │   ├── models.py          # Database models (Question, Category)
@@ -77,6 +78,7 @@ quiz_project/
 │          ├── quiz.html
 │   
 └── requirements.txt      # Project dependencies
+```
 
 ## Database Models
 
