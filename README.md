@@ -16,6 +16,20 @@ A dynamic quiz application built with Django that allows users to test their kno
 - 🔄 Option to retry category-specific quizzes
 - ⚡ Instant feedback with correct/incorrect indicators
 
+## Screenshots
+
+### Dashboard
+![Dashboard](https://raw.githubusercontent.com/Gaganjeet15/Django_quiz/main/screenshots/dashboard.png)
+*Quiz Dashboard with category selection and progress tracking*
+
+### Quiz Interface
+![Quiz](https://raw.githubusercontent.com/Gaganjeet15/Django_quiz/main/screenshots/quiz.png)
+*Interactive quiz interface with multiple choice questions*
+
+### Results View
+![Results](https://raw.githubusercontent.com/Gaganjeet15/Django_quiz/main/screenshots/results.png)
+*Instant feedback with correct and incorrect answers highlighted*
+
 ## Technologies Used
 
 - Django 5.1.3
