@@ -1,8 +1,20 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_protect
-from .models import Question, UserPerformance, Category
+from .models import UserPerformance, Category, Question
 
-def dashboard(request):
+def login_view(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect('dashboard')  # Redirect to dashboard
+    return render(request, 'quiz/login.html')
+
+def dashboard_view(request):
     if not request.user.is_authenticated:
         return redirect('admin:login')
         
@@ -89,14 +101,3 @@ def quiz(request):
     })
 
 
-
-def quiz_result(request):
-    user_performance = UserPerformance.objects.filter(user=request.user)
-
-    total_questions = user_performance.count()
-    correct_answers = user_performance.filter(is_correct=True).count()
-
-    return render(request, 'quiz/result.html', {
-        'score': correct_answers,
-        'total_questions': total_questions
-    })

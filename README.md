@@ -33,13 +33,29 @@ To access the application:
 ![Dashboard](https://raw.githubusercontent.com/Gaganjeet15/Django_quiz/main/screenshots/dashboard.png)
 *Quiz Dashboard with category selection and progress tracking*
 
+## Screenshots
+
+### Dashboard
+![Dashboard](https://raw.githubusercontent.com/Gaganjeet15/Django_quiz/main/screenshot/dashboard.png)
+*Quiz Dashboard with category selection and progress tracking*
+
 ### Quiz Interface
-![Quiz](https://raw.githubusercontent.com/Gaganjeet15/Django_quiz/main/screenshots/quiz.png)
+![Quiz](https://raw.githubusercontent.com/Gaganjeet15/Django_quiz/main/screenshot/quiz.png)
 *Interactive quiz interface with multiple choice questions*
 
+<<<<<<< HEAD
 ### Results View
 ![Results](https://raw.githubusercontent.com/Gaganjeet15/Django_quiz/main/screenshots/results.png)
 *Instant feedback with correct and incorrect answers highlighted*
+=======
+### Additional Feature
+![Another Quiz](https://raw.githubusercontent.com/Gaganjeet15/Django_quiz/main/screenshot/try_anotherQuiz.png)
+*Instant feedback with correct and incorrect answers highlighted*
+
+### Results View
+![Results](https://raw.githubusercontent.com/Gaganjeet15/Django_quiz/main/screenshot/result.png)
+*Result view in Dashboard*
+>>>>>>> origin/main
 
 ## Technologies Used
 
