@@ -22,17 +22,22 @@ A dynamic quiz application built with Django that allows users to test their kno
 ![Dashboard](https://raw.githubusercontent.com/Gaganjeet15/Django_quiz/main/screenshots/dashboard.png)
 *Quiz Dashboard with category selection and progress tracking*
 
+## Screenshots
+
+### Dashboard
+![Dashboard](https://raw.githubusercontent.com/Gaganjeet15/Django_quiz/main/screenshot/dashboard.png)
+*Quiz Dashboard with category selection and progress tracking*
+
 ### Quiz Interface
-![Quiz](https://raw.githubusercontent.com/Gaganjeet15/Django_quiz/main/screenshots/quiz.png)
+![Quiz](https://raw.githubusercontent.com/Gaganjeet15/Django_quiz/main/screenshot/quiz.png)
 *Interactive quiz interface with multiple choice questions*
 
 ### Additional Feature
-![Another Quiz](https://raw.githubusercontent.com/Gaganjeet15/Django_quiz/main/screenshots/try_anotherQuiz.png)
+![Another Quiz](https://raw.githubusercontent.com/Gaganjeet15/Django_quiz/main/screenshot/try_anotherQuiz.png)
 *Instant feedback with correct and incorrect answers highlighted*
 
-
 ### Results View
-![Results](https://raw.githubusercontent.com/Gaganjeet15/Django_quiz/main/screenshots/results.png)
+![Results](https://raw.githubusercontent.com/Gaganjeet15/Django_quiz/main/screenshot/result.png)
 *Result view in Dashboard*
 
 ## Technologies Used
